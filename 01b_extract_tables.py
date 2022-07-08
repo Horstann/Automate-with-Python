@@ -3,9 +3,9 @@
 import camelot
 
 # extract PDFs
-tables = camelot.read_pdf('foo.pdf', pages='1')
+tables = camelot.read_pdf('01b_foo.pdf', pages='1')
 
 # export PDF to csv
-tables.export('foo.csv', f='csv', compress=True)
-tables[0].to_csv('foo.csv') # to csv
-display(tables[0].df) # to df
+tables.export('01b_foo1.csv', f='csv', compress=True) # to csv in zip
+tables[0].to_csv('01b_foo2.csv') # to csv
+print(tables[0].df) # to df
