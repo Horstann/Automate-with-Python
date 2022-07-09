@@ -15,7 +15,7 @@ now = now.strftime("%m%d%Y") # convert to format MMDDYYYY
 
 # Some important variables
 website = 'https://www.thesun.co.uk/sport/football/'
-path = "C://Program Files/chromedriver.exe"
+path = "C://Program\ Files/chromedriver.exe"
 
 # Create driver & activate Headless mode - doesn't open browser, all done in background
 from selenium.webdriver.chrome.options import Options
@@ -42,7 +42,7 @@ for container in containers:
 
 # Store csv in app_path
 df = pd.DataFrame(headlines)
-file_name = f"03_headlines_{now}.csv"
+file_name = f'03_headlines_{now}.csv'
 final_path = os.path.join(app_path, file_name)
 df.to_csv(final_path)
 
