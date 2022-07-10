@@ -43,7 +43,8 @@ for container in containers:
 # Store csv in app_path
 df = pd.DataFrame(headlines)
 dir_path = os.path.dirname(os.path.realpath(__file__))
-df.to_csv(f'{dir_path}\03_headlines_{now}.csv')
+final_path = os.path.join(dir_path, f"03_headlines_{now}.csv")
+df.to_csv(final_path)
 
 # Close driver
 driver.quit()
