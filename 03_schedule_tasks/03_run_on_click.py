@@ -44,6 +44,7 @@ for container in containers:
 df = pd.DataFrame(headlines)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 final_path = os.path.join(dir_path, f"03_headlines_{now}.csv")
+final_path = f"C:/Users/HP/OneDrive/Documents/ONLINE COURSES/Automate with Python/03_schedule_tasks/03_headlines_{now}.csv"
 df.to_csv(final_path)
 
 # Close driver
