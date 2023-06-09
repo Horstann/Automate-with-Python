@@ -20,7 +20,7 @@ pyautogui.press("enter")
 time.sleep(1)
 pyautogui.click(841, 476) # (577, 466) or (841, 476)
 # Maximise window
-pyautogui.hotkey('ctrl', 'up')
+pyautogui.hotkey('win', 'up')
 
 # Unblock user input
 for i in range(150):
