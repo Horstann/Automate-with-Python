@@ -50,7 +50,7 @@ df.to_csv(final_path)
 # Close driver
 driver.quit()
 
-# Now run the below in terminal, make sure you're in the folder
+# Now run the below in terminal, make sure you're in this file's directory
 """
 pip install pyinstaller
 pyinstaller --onefile <py filename>

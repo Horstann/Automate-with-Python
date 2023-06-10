@@ -1,0 +1,47 @@
+### SCRAPY SYNTAX BASICS ###
+Can even use it in terminal:
+1. After your spider is set up (eg. scrapy startproject <project-name>), navigate to its directory
+2. scrapy shell <website_link>
+
+# CSS Selectors
+response.css('a.action.next')
+# Gets all elements with the 'a' tag 
+# and 'action  next' class - you can use dot . to cover for space
+
+response.css('a[title=Next]')
+# Gets all elements with 'a' tag, and title attr with value 'Next'
+
+response.css('a[title=Next]::attr(href)').get()
+# Gets the href attribute (a link) of the 1st element
+
+response.css('span.price::text').get()
+# Gets text between the tags eg. <span class="price">$51.30</span>
+
+response.css('li.next a::attr(href)').get()
+# You can even access child elements from parents
+# Eg. here you're accessing the 'a' tag within the 'li' tag of class 'next'
+
+# You can store all your variables in an info.md just for your own reference
+
+# X Path
+response.xpath()
+
+# For easy retrieval of CSS syntax or XPath, use Chrome's selector gadget extension
+
+
+
+### STORING SCRAPED DATA IN FILES ###
+Type in terminal:
+1. JSON
+scrapy crawl <spider-name> -o file-name.json
+2. CSV
+scrapy crawl <spider-name> -o file-name.csv
+3. XML
+scrapy crawl <spider-name> -o file-name.xml
+
+
+
+### LOGGING INTO SITES ###
+1. Find Form Data in inspect > Network
+2. Get username, password
+3. Get csrf_token from form element
