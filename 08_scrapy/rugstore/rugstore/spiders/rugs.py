@@ -1,8 +1,8 @@
 import scrapy
-from items import RugstoreItem
+from ..items import RugstoreItem
 
 class AllrugsSpider(scrapy.Spider):
-    name = 'allrugs'
+    name = 'rugs'
     allowed_domains = ['therugshopuk.co.uk']
     start_urls = ['https://www.therugshopuk.co.uk/rugs-by-type/rugs.html']
 

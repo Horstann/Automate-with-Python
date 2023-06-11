@@ -1,7 +1,14 @@
-### SCRAPY SYNTAX BASICS ###
+### SETTING UP SCRAPY FRAMEWORK ###
 Can even use it in terminal:
-1. After your spider is set up (eg. scrapy startproject <project-name>), navigate to its directory
-2. scrapy shell <website_link>
+1. scrapy startproject <project-name> # Creates the Srapy framework
+Then navigate to its directory
+2. scrapy genspider <spider-name> <website-link> # Creates a spider in the spiders folder
+Then you can run
+3. scrapy shell <website-link> 
+to use Scrapy's CSS selectors & so on
+
+
+### SYNTAX BASICS ###
 
 # CSS Selectors
 response.css('a.action.next')
@@ -40,8 +47,11 @@ scrapy crawl <spider-name> -o file-name.csv
 scrapy crawl <spider-name> -o file-name.xml
 
 
-
 ### LOGGING INTO SITES ###
-1. Find Form Data in inspect > Network
-2. Get username, password
-3. Get csrf_token from form element
+1. Find Form Data in inspect > Network > Form Data
+2. Check what fields are shown (including username, password)
+3. Get csrf_token/form_key from the form element
+
+
+### STORING SCRAPED DATA IN DATABASES ###
+All this is done in pipelines.py, check that out

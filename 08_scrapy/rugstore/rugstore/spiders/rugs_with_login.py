@@ -4,7 +4,7 @@ from scrapy.http import FormRequest
 from scrapy.utils.response import open_in_browser
 
 class LoginSpider(scrapy.Spider):
-    name = 'allrugs'
+    name = 'rugs_with_login'
     allowed_domains = ['therugshopuk.co.uk']
     start_urls = ['https://www.therugshopuk.co.uk/rugs-by-type/rugs.html']
 
@@ -38,7 +38,8 @@ class LoginSpider(scrapy.Spider):
 
     def scrape(self, response):
         #open_in_browser(response)
-        
+        print("\nSCRAPING\n")
+
         # start scraping in the clearence page
         items = RugstoreItem()
 
